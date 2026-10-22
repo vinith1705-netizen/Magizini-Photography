@@ -78,6 +78,12 @@
         "image": "/assets/aistudio/magizini_photography_logo_high_quality_4x_b65cd104.png",
         "description": "Professional wedding photography, candid moments, couple portraits, cinematography, and handcrafted albums in Bhavani, Kumarapalayam, and Tamil Nadu.",
         "telephone": ["+918095410495", "+918095412922"],
+        "email": "Magiziniphotography@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/magizini.photography/",
+          "https://www.youtube.com/@magiziniphotography",
+          "https://www.facebook.com/magiziniphotography"
+        ],
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Bhavani & Kumarapalayam",
@@ -168,39 +174,27 @@
           <ul class="nav-menu">
             <li><a href="#home" class="nav-link active">Home</a></li>
             <li><a href="#about" class="nav-link">About Us</a></li>
-            <li><a href="#services" class="nav-link">Wedding Photography</a></li>
+            <li class="nav-item-dropdown">
+              <a href="#services" class="nav-link nav-link-dropdown" aria-haspopup="true" aria-expanded="false">
+                <span>Our Services</span>
+              </a>
+              <ul class="dropdown-menu" aria-label="Photography Services">
+                <li><a href="#services" class="dropdown-item">Candid Wedding Photography</a></li>
+                <li><a href="#services" class="dropdown-item">Traditional Photography</a></li>
+                <li><a href="#services" class="dropdown-item">Wedding Cinematography & Drone</a></li>
+                <li><a href="#gallery" class="dropdown-item">Pre & Post-Wedding Shoots</a></li>
+                <li><a href="#gallery" class="dropdown-item">Babies & Birthdays</a></li>
+                <li><a href="#services" class="dropdown-item">Bespoke Photo Albums</a></li>
+              </ul>
+            </li>
             <li><a href="#gallery" class="nav-link">Gallery</a></li>
             <li><a href="#approach" class="nav-link">Our Approach</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
           </ul>
         </nav>
 
         <!-- Zone 3: Header Actions -->
         <div class="header-actions">
-          <a
-            href="https://wa.me/918095410495?text=Hi%20Magizini%20Photography%2C%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20photography%20services."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="btn btn-whatsapp btn-sm"
-            aria-label="WhatsApp enquiry"
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-              ></path>
-            </svg>
-            <span>WhatsApp</span>
-          </a>
-
           <!-- Mobile Toggle Button -->
           <button
             class="mobile-toggle"
@@ -219,9 +213,22 @@
       <div class="mobile-drawer" id="mobile-nav-drawer">
         <a href="#home" class="mobile-nav-link">Home</a>
         <a href="#about" class="mobile-nav-link">About Us</a>
-        <a href="#services" class="mobile-nav-link">Wedding Photography</a>
+        <div class="mobile-drawer-dropdown">
+          <button class="mobile-nav-link mobile-dropdown-toggle" aria-expanded="false">
+            <span>Our Services</span>
+          </button>
+          <div class="mobile-dropdown-sublinks">
+            <a href="#services" class="mobile-sublink">Candid Wedding Photography</a>
+            <a href="#services" class="mobile-sublink">Traditional Photography</a>
+            <a href="#services" class="mobile-sublink">Wedding Cinematography & Drone</a>
+            <a href="#gallery" class="mobile-sublink">Pre & Post-Wedding Shoots</a>
+            <a href="#gallery" class="mobile-sublink">Babies & Birthdays</a>
+            <a href="#services" class="mobile-sublink">Bespoke Photo Albums</a>
+          </div>
+        </div>
         <a href="#gallery" class="mobile-nav-link">Gallery</a>
         <a href="#approach" class="mobile-nav-link">Our Approach</a>
+        <a href="#contact" class="mobile-nav-link">Contact</a>
         <a
           href="https://wa.me/918095410495?text=Hi%20Magizini%20Photography%2C%20I%20would%20like%20to%20enquire%20about%20your%20wedding%20photography%20services."
           target="_blank"
@@ -1428,7 +1435,7 @@
     <!-- ==========================================================================
        FOOTER
        ========================================================================== -->
-    <footer class="site-footer">
+    <footer class="site-footer" id="contact">
       <div class="container">
         <div class="footer-grid">
           <!-- Col 1: Brand Info -->
@@ -1448,33 +1455,47 @@
               cinematic finesse.
             </p>
             <div class="footer-social-links">
-              <!-- WhatsApp -->
-              <a
-                href="https://wa.me/918095410495"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-                aria-label="Connect on WhatsApp"
-              >
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              </a>
               <!-- Instagram -->
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/magizini.photography/"
                 target="_blank"
                 rel="noopener noreferrer"
                 class="social-link"
-                aria-label="Follow on Instagram"
+                aria-label="Follow Magizini Photography on Instagram (@magizini.photography)"
+                title="Instagram: @magizini.photography"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
               </a>
-              <!-- Telephone -->
+              <!-- YouTube -->
               <a
-                href="tel:+918095410495"
+                href="https://www.youtube.com/@magiziniphotography"
+                target="_blank"
+                rel="noopener noreferrer"
                 class="social-link"
-                aria-label="Call studio"
+                aria-label="Watch Magizini Photography wedding films on YouTube (@magiziniphotography)"
+                title="YouTube: @magiziniphotography"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15.05 5A5 5 0 0 1 19 8.95M15.05 1A9 9 0 0 1 23 8.94m-1 7.98v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"></polygon></svg>
+              </a>
+              <!-- Facebook -->
+              <a
+                href="https://www.facebook.com/magiziniphotography"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+                aria-label="Follow Magizini Photography on Facebook (magiziniphotography)"
+                title="Facebook: magiziniphotography"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+              </a>
+              <!-- Email -->
+              <a
+                href="mailto:Magiziniphotography@gmail.com"
+                class="social-link"
+                aria-label="Email Magizini Photography"
+                title="Email: Magiziniphotography@gmail.com"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
               </a>
             </div>
           </div>
@@ -1488,6 +1509,7 @@
               <li><a href="#services" class="footer-link">Wedding Photography</a></li>
               <li><a href="#gallery" class="footer-link">Gallery</a></li>
               <li><a href="#approach" class="footer-link">Our Approach</a></li>
+              <li><a href="#contact" class="footer-link">Contact</a></li>
               <li><a href="https://wa.me/918095410495" target="_blank" rel="noopener noreferrer" class="footer-link">WhatsApp Us</a></li>
             </ul>
           </div>
@@ -1509,6 +1531,10 @@
           <div>
             <h4 class="footer-heading">Studio Contact</h4>
             <div class="footer-contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"></rect><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path></svg>
+              <span><a href="mailto:Magiziniphotography@gmail.com">Magiziniphotography@gmail.com</a></span>
+            </div>
+            <div class="footer-contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg>
               <span>Bhavani, Kumarapalayam, Tamil Nadu 638301</span>
             </div>
@@ -1520,7 +1546,8 @@
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
               <span><a href="tel:+918095412922">+91 80954 12922</a></span>
             </div>
-            <div style="margin-top: 1rem;">
+
+            <div style="margin-top: 1.25rem;">
               <a
                 href="https://wa.me/918095410495?text=Hi%20Magizini%20Photography"
                 target="_blank"

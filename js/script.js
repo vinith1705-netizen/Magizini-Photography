@@ -13,6 +13,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initMobileNav();
+  initDropdowns();
   initScrollspy();
   initGalleryLightbox();
   initGalleryFilters();
@@ -76,7 +77,23 @@ function initMobileNav() {
 
   toggleBtn.addEventListener('click', toggleDrawer);
 
-  links.forEach(link => {
+  // Handle mobile dropdown toggle accordion
+  const dropdownToggle = drawer.querySelector('.mobile-dropdown-toggle');
+  const dropdownSublinks = drawer.querySelector('.mobile-dropdown-sublinks');
+  if (dropdownToggle && dropdownSublinks) {
+    dropdownToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const isOpen = dropdownSublinks.classList.contains('open');
+      dropdownSublinks.classList.toggle('open');
+      dropdownToggle.classList.toggle('active');
+      dropdownToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+  }
+
+  // Regular mobile links (excluding accordion toggle button) & sublinks close drawer on navigation
+  const clickableLinks = drawer.querySelectorAll('.mobile-nav-link:not(.mobile-dropdown-toggle), .mobile-sublink, .btn-whatsapp');
+  clickableLinks.forEach(link => {
     link.addEventListener('click', () => {
       closeDrawer();
     });
@@ -98,10 +115,77 @@ function initMobileNav() {
 }
 
 /* ==========================================================================
+   3. DROPDOWN NAVIGATION (DESKTOP & ACCESSIBILITY)
+   ========================================================================== */
+function initDropdowns() {
+  const dropdownItems = document.querySelectorAll('.nav-item-dropdown');
+
+  dropdownItems.forEach(item => {
+    const trigger = item.querySelector('.nav-link-dropdown');
+    const menu = item.querySelector('.dropdown-menu');
+    if (!trigger || !menu) return;
+
+    // Toggle on click without jumping to page top or away
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const isOpen = item.classList.contains('is-open');
+
+      // Close any other open dropdowns
+      dropdownItems.forEach(other => {
+        if (other !== item) {
+          other.classList.remove('is-open');
+          const otherTrigger = other.querySelector('.nav-link-dropdown');
+          if (otherTrigger) otherTrigger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      if (isOpen) {
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      } else {
+        item.classList.add('is-open');
+        trigger.setAttribute('aria-expanded', 'true');
+      }
+    });
+
+    // Close when clicking an item inside dropdown
+    const sublinks = menu.querySelectorAll('a');
+    sublinks.forEach(link => {
+      link.addEventListener('click', () => {
+        item.classList.remove('is-open');
+        trigger.setAttribute('aria-expanded', 'false');
+      });
+    });
+  });
+
+  // Close when clicking anywhere outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('.nav-item-dropdown')) {
+      dropdownItems.forEach(item => {
+        item.classList.remove('is-open');
+        const trigger = item.querySelector('.nav-link-dropdown');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+
+  // Close on Escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      dropdownItems.forEach(item => {
+        item.classList.remove('is-open');
+        const trigger = item.querySelector('.nav-link-dropdown');
+        if (trigger) trigger.setAttribute('aria-expanded', 'false');
+      });
+    }
+  });
+}
+
+/* ==========================================================================
    3. SCROLLSPY
    ========================================================================== */
 function initScrollspy() {
-  const sections = document.querySelectorAll('section[id]');
+  const sections = document.querySelectorAll('section[id], footer[id]');
   const navLinks = document.querySelectorAll('.nav-link[href^="#"]');
 
   if (!sections.length || !navLinks.length) return;
